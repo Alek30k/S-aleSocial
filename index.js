@@ -6,9 +6,9 @@ import postRoutes from "./routes/posts.js";
 import commentRoutes from "./routes/comments.js";
 import likeRoutes from "./routes/likes.js";
 // import relationshipRoutes from "./routes/relationships.js";
-
+import cors from "cors";
 // import multer from "multer";
-// import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser";
 
 //middlewares
 app.use((req, res, next) => {
@@ -16,8 +16,12 @@ app.use((req, res, next) => {
   next();
 });
 app.use(express.json());
-
-// app.use(cookieParser());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+app.use(cookieParser());
 
 // const storage = multer.diskStorage({
 //   destination: function (req, file, cb) {
