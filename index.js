@@ -25,7 +25,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://s-alesocial-production.up.railway.app",
+    origin: "https://alesocial.vercel.app/",
   })
 );
 
