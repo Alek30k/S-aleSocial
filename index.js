@@ -21,13 +21,13 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
-app.use(
-  cors({
-    origin: "https://alesocial.vercel.app/",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://alesocial.vercel.app/",
+//   })
+// );
 
 app.use(cookieParser());
 
