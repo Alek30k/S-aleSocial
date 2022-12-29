@@ -18,13 +18,11 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use(cors());
-
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://s-alesocial-production.up.railway.app",
+  })
+);
 
 app.use(cookieParser());
 
