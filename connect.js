@@ -8,7 +8,6 @@ export const db = mysql.createConnection({
   database: DB_NAME,
   port: DB_PORT,
 });
-connection.connect();
 
 // import mysql from "mysql";
 
