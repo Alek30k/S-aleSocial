@@ -7,11 +7,8 @@ export const db = mysql.createConnection({
   password: DB_PASSWORD,
   database: DB_NAME,
   port: DB_PORT,
-  connectionLimit: 10,
-  connectTimeout: 10000,
-  waitForConnections: true,
-  queueLimit: 0,
 });
+connection.connect();
 
 // import mysql from "mysql";
 
