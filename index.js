@@ -6,12 +6,9 @@ import postRoutes from "./routes/posts.js";
 import commentRoutes from "./routes/comments.js";
 import likeRoutes from "./routes/likes.js";
 import relationshipRoutes from "./routes/relationships.js";
-import dotenv from "dotenv";
 import cors from "cors";
 import multer from "multer";
 import cookieParser from "cookie-parser";
-
-dotenv.config();
 
 //middlewares
 app.use((req, res, next) => {
@@ -20,13 +17,13 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
-// app.use(
-//   cors({
-//     origin: "https://alesocial.vercel.app/",
-//   })
-// );
+app.use(
+  cors({
+    origin: "http://localhost:3000/",
+  })
+);
 
 app.use(cookieParser());
 
