@@ -9,6 +9,7 @@ export const db = mysql.createConnection({
   port: DB_PORT,
 });
 
+connection._pool._freeConnections.indexOf(connection);
 // import mysql from "mysql";
 
 // export const db = mysql.createConnection({
