@@ -31,7 +31,7 @@ export const getPosts = (req, res) => {
 
 export const addPost = (req, res) => {
   const token = req.cookies.accessToken;
-  if (!token) return res.status(401).json("Not logged in!");
+  if (!token) return res.status(401).json("Not loasdasdgged in!");
 
   jwt.verify(token, "secretkey", (err, userInfo) => {
     if (err) return res.status(403).json("Token is not valid!");
@@ -53,7 +53,7 @@ export const addPost = (req, res) => {
 };
 export const deletePost = (req, res) => {
   const token = req.cookies.accessToken;
-  if (!token) return res.status(401).json("Not logged in!");
+  if (!token) return res.status(401).json("Not loggasdased in!");
 
   jwt.verify(token, "secretkey", (err, userInfo) => {
     if (err) return res.status(403).json("Token is not valid!");
