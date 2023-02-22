@@ -16,4 +16,10 @@ export const db = mysql.createConnection({
   user: "root",
   password: "123456",
   database: "social",
+  port: 3306,
+  timezone: "+0800",
+  connectionLimit: 10,
+  connectTimeout: 10000,
+  waitForConnections: true,
+  queueLimit: 0,
 });
